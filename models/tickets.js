@@ -8,6 +8,8 @@ let ticketSchema = new Schema({
     type: String,
     require: [true, 'No code found']
   },
+  event: Object,
+  /*
   name: {
     type: String,
     require: [true, 'Name the event']
@@ -43,7 +45,7 @@ let ticketSchema = new Schema({
     require: [true, 'adress']
     },
     venue: {
-      type: String, 
+      type: String,
       require: true
     }
   },
@@ -54,6 +56,9 @@ let ticketSchema = new Schema({
     sold: {
       type: Number
     }
+  },*/
+  used: {
+    type: Boolean, default:false
   }
 });
 
