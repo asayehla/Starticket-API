@@ -6,7 +6,7 @@ const user = 'YOUR_USER';
 const password ='YOUR_PASSWORD';
 
 //connect to database
-mongoose.connect(`mongodb+srv://marwin:${process.env.PASSWORD}@cluster0-ijgbm.mongodb.net/test?retryWrites=true`, {
+mongoose.connect(`mongodb+srv://bex:<PASSWORD>@cluster0-hl0ma.mongodb.net/test?retryWrites=true`, {
     useNewUrlParser: true
   })
   .then(() => {
