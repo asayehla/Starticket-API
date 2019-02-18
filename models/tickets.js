@@ -5,8 +5,7 @@ let Schema = mongoose.Schema;
 //skapa ett schema
 let ticketSchema = new Schema({
   code: {
-    type: String,
-    require: [true, 'No code found']
+    type: String
   },
   event: Object,
   /*

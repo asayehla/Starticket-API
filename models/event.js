@@ -43,7 +43,7 @@ let eventSchema = new Schema({
     require: [true, 'adress']
     },
     venue: {
-      type: String, 
+      type: String,
       require: true
     }
   },
@@ -58,6 +58,6 @@ let eventSchema = new Schema({
 });
 
 //skapa en modell baserat på schemat
-let Event = mongoose.model('events', eventSchema);
+let Event = mongoose.model('event', eventSchema);
 
 module.exports = Event;
