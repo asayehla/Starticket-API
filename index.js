@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const user = 'YOUR_USER';
-const password ='YOUR_PASSWORD';
+const password ='bex1234';
 
 //connect to database
 mongoose.connect(`mongodb+srv://bex:${password}@cluster0-hl0ma.mongodb.net/test?retryWrites=true`, {
