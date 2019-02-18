@@ -33,8 +33,28 @@ let eventSchema = new Schema({
       type: String,
       require: true
     }
+  },
+  info: {
+    type: String
+  },
+  where: {
+    adress: {
+    type: String,
+    require: [true, 'adress']
+    },
+    venue: {
+      type: String, 
+      require: true
+    }
+  },
+  tickets: {
+    available: {
+      type: Number
+    },
+    sold: {
+      type: Number
+    }
   }
-
 });
 
 //skapa en modell baserat på schemat
