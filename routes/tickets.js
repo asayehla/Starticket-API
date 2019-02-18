@@ -5,6 +5,7 @@ let Ticket = require('../models/tickets');
 
 //POST
 module.exports.post = async (req, res, next) => {
+  
   try {
     //hantera post
     let ticket = req.body;

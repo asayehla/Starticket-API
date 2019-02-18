@@ -3,10 +3,11 @@ const Ticket = require('../models/tickets');
 //den gör att vi kan använda
 module.exports.get = async (req, res) => {
   console.log(req.params)
+  // let ticket = await Ticket.find({code: req.params.code});
 
   try {
     //verify code
-    let resp = await Ticket.find({ code: req.params.code })
+    let resp = await Ticket.find({ code: req.params.code }) // let ticket = await Ticket.find({ code: req.params.code })
 
     if(resp.length == 1){
       //Valid ticket
