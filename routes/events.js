@@ -6,12 +6,12 @@ let Event = require('../models/event');
 //GET
 module.exports.get = async (req, res) => {
 
- try {
-   res.status(200).send(await Event.find({}));
+  try {
+    res.status(200).send(await Event.find({}));
 
- } catch (err) {
-   res.status(500).send(err.stack);
- }
+  } catch (err) {
+    res.status(500).send(err.stack);
+  }
 
 
 }
@@ -19,8 +19,7 @@ module.exports.get = async (req, res) => {
 module.exports.post = async (req, res) => {
   try {
     res.status(200).send(await Event.create(req.body));
-  }
-  catch (err) {
+  } catch (err) {
     res.status(500).send(err.stack);
   }
 

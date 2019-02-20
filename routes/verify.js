@@ -1,4 +1,4 @@
-const Ticket = require('../models/tickets');
+const Ticket = require('../models/ticket');
 
 //den gör att vi kan använda
 module.exports.get = async (req, res) => {
@@ -7,9 +7,11 @@ module.exports.get = async (req, res) => {
 
   try {
     //verify code
-    let resp = await Ticket.find({ code: req.params.code }) // let ticket = await Ticket.find({ code: req.params.code })
+    let resp = await Ticket.find({
+      code: req.params.code
+    }) // let ticket = await Ticket.find({ code: req.params.code })
 
-    if(resp.length == 1){
+    if (resp.length == 1) {
       //Valid ticket
       res.status(200).send('Ticket is valid.');
 
@@ -18,9 +20,8 @@ module.exports.get = async (req, res) => {
       res.status(400).send('Ticket is NOT valid, get a real one, dude');
     }
 
-  }
-   catch (err) {
-     console.log(err)
+  } catch (err) {
+    console.log(err)
     res.status(500).send(err);
   }
 
