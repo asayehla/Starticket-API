@@ -56,7 +56,6 @@ module.exports.post = async (req, res) => {
 
       //write tickets to mongo
       let resp = await Ticket.create(tickets);
-
       res.status(200).send(resp);
 
     } else {
@@ -64,7 +63,6 @@ module.exports.post = async (req, res) => {
       console.info('Sorry, all tickets are sold');
       res.status(200).send('Sorry, no tickets left')
     }
-
   } catch (err) {
     res.status(500).send(err.stack);
   }

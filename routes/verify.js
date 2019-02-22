@@ -13,11 +13,11 @@ module.exports.get = async (req, res) => {
 
     if (resp.length == 1) {
       //Valid ticket
-      res.send('Ticket is valid.').status(200);
+      res.send('Ticket is valid').status(200);
 
     } else {
       //NOT valid
-      res.send('Ticket is NOT valid, get a real one, dude').status(406);
+      res.send('Ticket is NOT valid').status(406);
     }
 
   } catch (err) {
